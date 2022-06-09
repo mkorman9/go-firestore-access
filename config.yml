@@ -1,0 +1,7 @@
+gcp:
+  projectId: local-run
+
+  firestore:
+    emulator:
+      enabled: true
+      address: 127.0.0.1:8200

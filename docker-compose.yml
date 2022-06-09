@@ -1,0 +1,10 @@
+version: '3.9'
+
+services:
+  firestore:
+    image: mtlynch/firestore-emulator
+    environment:
+      - FIRESTORE_PROJECT_ID=local-run
+      - PORT=8200
+    ports:
+      - "127.0.0.1:8200:8200"
