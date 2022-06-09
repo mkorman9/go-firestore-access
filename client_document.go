@@ -17,17 +17,17 @@ type ClientDocument struct {
 	IsDeleted   bool     `firestore:"isDeleted"`
 }
 
-func (e *ClientDocument) ToClient() *Client {
+func (d *ClientDocument) ToClient() *Client {
 	return &Client{
-		ID:          e.ID,
-		Gender:      e.Gender,
-		FirstName:   e.FirstName,
-		LastName:    e.LastName,
-		Address:     e.Address,
-		PhoneNumber: e.PhoneNumber,
-		Email:       e.Email,
-		BirthDate:   utils.UnixPtrToTime(e.BirthDate),
-		CreditCards: e.CreditCards,
-		IsDeleted:   e.IsDeleted,
+		ID:          d.ID,
+		Gender:      d.Gender,
+		FirstName:   d.FirstName,
+		LastName:    d.LastName,
+		Address:     d.Address,
+		PhoneNumber: d.PhoneNumber,
+		Email:       d.Email,
+		BirthDate:   utils.UnixPtrToTime(d.BirthDate),
+		CreditCards: d.CreditCards,
+		IsDeleted:   d.IsDeleted,
 	}
 }
